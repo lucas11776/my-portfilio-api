@@ -1,0 +1,34 @@
+
+
+/********* [Routes] *********/
+
+$route['default_controller'] = 'home';
+
+dir = "./application/config/routes.php"
+
+// Send Message Route
+$route['message/send']  = 'message/reveived_message';
+$route['package/apply'] = 'package/apply'; 
+$route['text'] = 'text/index';
+
+$route['404_override'] = '';
+$route['translate_uri_dashes'] = FALSE;
+
+
+/********* [Auto-Load] *********/
+
+dir = "./application/config/autoload.php"
+
+$autoload['libraries'] = array(
+    'unit_test',
+    'database', 
+    'form_validation'
+);
+$autoload['helper'] = array('form');
+$autoload['model'] = array(
+    'api_model', 
+    'response_model', 
+    'mail_model', 
+    'message_model',
+    'package_model'
+);
